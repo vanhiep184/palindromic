@@ -12,28 +12,26 @@
     <h2>Check Palindromic</h2>
     Number: <input type="number" id="myInput">
     <p id="result">Please input number.</p>
-    <button onclick="checkPalindromic()">Check now</button>
-</body>
-<script>
-    const input = document.getElementById("myInput")
-    const result = document.getElementById("result")
-    const checkPalindromic = () => {
-        const numInput = input.value.toString()
-        result.innerText = ""
-        if (!numInput) {
-            result.innerText = "Invalid number."
-            return
-        }
-        const length = numInput.length;
-        const nLength = Math.floor(length / 2)
-        for (var i = 0; i < nLength; i++) {
-            if (numInput.charAt(i) !== numInput.charAt(length - 1 - i)) {
-                result.innerText = "This number is NOT a Palindromic."
-                return false;
+    <button onclick="onCheck()">Check now</button>
+    <script type="text/javascript" src="./palindromic/palindromic.js"></script>
+    <script>
+        const input = document.getElementById("myInput");
+        const result = document.getElementById("result");
+
+        function onCheck() {
+            const numInput = input.value;
+            result.innerText = "";
+            if (!numInput) {
+                result.innerText = "Invalid number.";
+                return;
             }
+            if (!isPalindrome(numInput)) {
+                result.innerText = "This number is NOT a Palindromic.";
+                return;
+            }
+            result.innerText = "This number is a Palindromic.";
         }
-        result.innerText = "This number is a Palindromic."
-    }
-</script>
+    </script>
+</body>
 
 </html>

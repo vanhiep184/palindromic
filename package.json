@@ -1,0 +1,22 @@
+{
+    "name": "palindromic",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vanhiep184/palindromic.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/vanhiep184/palindromic/issues"
+    },
+    "homepage": "https://github.com/vanhiep184/palindromic#readme",
+    "devDependencies": {
+        "jest": "^27.0.6"
+    }
+}
